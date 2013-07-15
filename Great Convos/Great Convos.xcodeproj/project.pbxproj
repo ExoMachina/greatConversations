@@ -24,6 +24,9 @@
 		79F23F911794A9C500DEF2E5 /* GCMasterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F23F8F1794A9C500DEF2E5 /* GCMasterViewController_iPad.xib */; };
 		79F23F941794A9C500DEF2E5 /* GCDetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F23F921794A9C500DEF2E5 /* GCDetailViewController_iPhone.xib */; };
 		79F23F971794A9C500DEF2E5 /* GCDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F23F951794A9C500DEF2E5 /* GCDetailViewController_iPad.xib */; };
+		79F23FA01794AE2800DEF2E5 /* Conversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F23F9F1794AE2800DEF2E5 /* Conversation.m */; };
+		79F23FA81794AF9500DEF2E5 /* GCNewConversationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F23FA61794AF9500DEF2E5 /* GCNewConversationVC.m */; };
+		79F23FA91794AF9500DEF2E5 /* GCNewConversationVC-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F23FA71794AF9500DEF2E5 /* GCNewConversationVC-iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,11 @@
 		79F23F901794A9C500DEF2E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GCMasterViewController_iPad.xib; sourceTree = "<group>"; };
 		79F23F931794A9C500DEF2E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GCDetailViewController_iPhone.xib; sourceTree = "<group>"; };
 		79F23F961794A9C500DEF2E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GCDetailViewController_iPad.xib; sourceTree = "<group>"; };
+		79F23F9E1794AE2800DEF2E5 /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversation.h; sourceTree = "<group>"; };
+		79F23F9F1794AE2800DEF2E5 /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversation.m; sourceTree = "<group>"; };
+		79F23FA51794AF9500DEF2E5 /* GCNewConversationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCNewConversationVC.h; sourceTree = "<group>"; };
+		79F23FA61794AF9500DEF2E5 /* GCNewConversationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCNewConversationVC.m; sourceTree = "<group>"; };
+		79F23FA71794AF9500DEF2E5 /* GCNewConversationVC-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "GCNewConversationVC-iPhone.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,17 +106,10 @@
 		79F23F711794A9C400DEF2E5 /* Great Convos */ = {
 			isa = PBXGroup;
 			children = (
+				79F23FA21794AF1500DEF2E5 /* View */,
+				79F23FA11794AE3300DEF2E5 /* Data Model */,
 				79F23F7A1794A9C500DEF2E5 /* GCAppDelegate.h */,
 				79F23F7B1794A9C500DEF2E5 /* GCAppDelegate.m */,
-				79F23F861794A9C500DEF2E5 /* GCMasterViewController.h */,
-				79F23F871794A9C500DEF2E5 /* GCMasterViewController.m */,
-				79F23F891794A9C500DEF2E5 /* GCDetailViewController.h */,
-				79F23F8A1794A9C500DEF2E5 /* GCDetailViewController.m */,
-				79F23F8C1794A9C500DEF2E5 /* GCMasterViewController_iPhone.xib */,
-				79F23F8F1794A9C500DEF2E5 /* GCMasterViewController_iPad.xib */,
-				79F23F921794A9C500DEF2E5 /* GCDetailViewController_iPhone.xib */,
-				79F23F951794A9C500DEF2E5 /* GCDetailViewController_iPad.xib */,
-				79F23F831794A9C500DEF2E5 /* Great_Convos.xcdatamodeld */,
 				79F23F721794A9C400DEF2E5 /* Supporting Files */,
 			);
 			path = "Great Convos";
@@ -126,6 +127,50 @@
 				79F23F811794A9C500DEF2E5 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79F23FA11794AE3300DEF2E5 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				79F23F831794A9C500DEF2E5 /* Great_Convos.xcdatamodeld */,
+				79F23F9E1794AE2800DEF2E5 /* Conversation.h */,
+				79F23F9F1794AE2800DEF2E5 /* Conversation.m */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		79F23FA21794AF1500DEF2E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79F23FA41794AF3100DEF2E5 /* New Convo */,
+				79F23FA31794AF2D00DEF2E5 /* Defaults */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		79F23FA31794AF2D00DEF2E5 /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				79F23F861794A9C500DEF2E5 /* GCMasterViewController.h */,
+				79F23F871794A9C500DEF2E5 /* GCMasterViewController.m */,
+				79F23F891794A9C500DEF2E5 /* GCDetailViewController.h */,
+				79F23F8A1794A9C500DEF2E5 /* GCDetailViewController.m */,
+				79F23F8C1794A9C500DEF2E5 /* GCMasterViewController_iPhone.xib */,
+				79F23F8F1794A9C500DEF2E5 /* GCMasterViewController_iPad.xib */,
+				79F23F921794A9C500DEF2E5 /* GCDetailViewController_iPhone.xib */,
+				79F23F951794A9C500DEF2E5 /* GCDetailViewController_iPad.xib */,
+			);
+			name = Defaults;
+			sourceTree = "<group>";
+		};
+		79F23FA41794AF3100DEF2E5 /* New Convo */ = {
+			isa = PBXGroup;
+			children = (
+				79F23FA51794AF9500DEF2E5 /* GCNewConversationVC.h */,
+				79F23FA61794AF9500DEF2E5 /* GCNewConversationVC.m */,
+				79F23FA71794AF9500DEF2E5 /* GCNewConversationVC-iPhone.xib */,
+			);
+			name = "New Convo";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +233,7 @@
 				79F23F911794A9C500DEF2E5 /* GCMasterViewController_iPad.xib in Resources */,
 				79F23F941794A9C500DEF2E5 /* GCDetailViewController_iPhone.xib in Resources */,
 				79F23F971794A9C500DEF2E5 /* GCDetailViewController_iPad.xib in Resources */,
+				79F23FA91794AF9500DEF2E5 /* GCNewConversationVC-iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +249,8 @@
 				79F23F851794A9C500DEF2E5 /* Great_Convos.xcdatamodeld in Sources */,
 				79F23F881794A9C500DEF2E5 /* GCMasterViewController.m in Sources */,
 				79F23F8B1794A9C500DEF2E5 /* GCDetailViewController.m in Sources */,
+				79F23FA01794AE2800DEF2E5 /* Conversation.m in Sources */,
+				79F23FA81794AF9500DEF2E5 /* GCNewConversationVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
