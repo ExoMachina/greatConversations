@@ -50,6 +50,7 @@
 		79F23FF41794CF3200DEF2E5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F23FF21794CF3200DEF2E5 /* AVFoundation.framework */; };
 		79F23FF51794CF3200DEF2E5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F23FF31794CF3200DEF2E5 /* CoreText.framework */; };
 		79F23FF61794CFEE00DEF2E5 /* NoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F23FE01794C28300DEF2E5 /* NoteView.m */; };
+		79F86A341795E144006CC358 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F86A331795E144006CC358 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +130,7 @@
 		79F23FF01794CF2C00DEF2E5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		79F23FF21794CF3200DEF2E5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		79F23FF31794CF3200DEF2E5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		79F86A331795E144006CC358 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				79F23FF11794CF2C00DEF2E5 /* QuartzCore.framework in Frameworks */,
 				79F23FF41794CF3200DEF2E5 /* AVFoundation.framework in Frameworks */,
 				79F23FF51794CF3200DEF2E5 /* CoreText.framework in Frameworks */,
+				79F86A341795E144006CC358 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +172,7 @@
 		79F23F681794A9C400DEF2E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79F86A331795E144006CC358 /* Social.framework */,
 				79F23FF21794CF3200DEF2E5 /* AVFoundation.framework */,
 				79F23FF31794CF3200DEF2E5 /* CoreText.framework */,
 				79F23FF01794CF2C00DEF2E5 /* QuartzCore.framework */,
@@ -590,6 +594,7 @@
 				79F23F9C1794A9C500DEF2E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

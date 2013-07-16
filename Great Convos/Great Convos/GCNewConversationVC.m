@@ -8,6 +8,7 @@
 
 #import "GCNewConversationVC.h"
 #import <QuartzCore/QuartzCore.h>
+#import <Social/Social.h>
 
 @interface GCNewConversationVC ()
 
@@ -36,12 +37,34 @@
 	self.whatBoxView.layer.borderWidth = 1;
 	self.whatBoxView.layer.cornerRadius = 3;
 
+	self.whatNoteView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)nameFieldBeganEditing:(id)sender {
+	[self.delegate newConversationVCWantsScrollToViewOrigin:CGPointMake(0, 57)];
+}
+- (IBAction)twitterFieldBeganEditing:(id)sender {
+	[self.delegate newConversationVCWantsScrollToViewOrigin:CGPointMake(0, 57)];
+}
+
+-(void)textViewDidBeginEditing:(UITextView *)textView{
+	[self.delegate newConversationVCWantsScrollToViewOrigin:CGPointMake(0, 149)];
+}
+- (IBAction)saveConvoPressed:(id)sender {
+	if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter] == YES){
+		SLComposeViewController * twitterComposer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+		NSString * twitterInitalText = self.whatNoteView.text;
+		[twitterComposer setInitialText:twitterInitalText];
+		[self presentViewController:twitterComposer animated:TRUE completion:NULL];
+
+	}
+	
+	
 }
 
 @end

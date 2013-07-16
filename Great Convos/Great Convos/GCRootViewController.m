@@ -16,7 +16,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:@"GCNewConversationVC-iPhone" bundle:nibBundleOrNil];
+    self = [super initWithNibName:@"GCRootViewController-iPhone" bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -31,22 +31,32 @@
 	
 	
 	[self.mainContentScrollView setBackgroundColor:[UIColor colorWithWhite:1 alpha:0]];
-	[self.mainContentScrollView setPagingEnabled:TRUE];
 	[self.mainContentScrollView setDelegate:self];
 
 	self.addConversationVC = [[GCNewConversationVC alloc] initWithNibName:nil bundle:nil];
+	[self.addConversationVC setDelegate:self];
 	self.addConversationVC.view.layer.shadowColor = UIColor.blackColor.CGColor;
 	self.addConversationVC.view.layer.shadowOffset = CGSizeMake(0, 1);
 	self.addConversationVC.view.layer.shadowOpacity = 0.2;
 	self.addConversationVC.view.layer.shadowRadius = 2;
 	self.addConversationVC.view.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.addConversationVC.view.bounds].CGPath;;
-
 	
 	CGFloat totalHeight =  self.addConversationVC.view.height;
 	[self.mainContentScrollView setContentSize:CGSizeMake(320, totalHeight)];
 	[self.mainContentScrollView addSubview:self.addConversationVC.view];
 
 	
+}
+-(void) scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+	[[[UIResponder new] currentFirstResponder] resignFirstResponder];
+}
+
+-(void) scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+}
+
+
+-(void) newConversationVCWantsScrollToViewOrigin:(CGPoint)origin{
+	[self.mainContentScrollView setContentOffset:origin animated:TRUE];
 }
 
 - (void)didReceiveMemoryWarning

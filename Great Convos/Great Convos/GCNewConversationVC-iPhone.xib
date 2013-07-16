@@ -192,14 +192,14 @@
 								<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
-								<object class="IBUIFontDescription" key="IBUIFontDescription" id="85501185">
-									<string key="name">MarkerFelt-Thin</string>
-									<string key="family">Marker Felt</string>
+								<object class="IBUIFontDescription" key="IBUIFontDescription" id="916154093">
+									<string key="name">Noteworthy-Light</string>
+									<string key="family">Noteworthy</string>
 									<int key="traits">0</int>
 									<double key="pointSize">14</double>
 								</object>
-								<object class="NSFont" key="IBUIFont" id="192162959">
-									<string key="NSName">MarkerFelt-Thin</string>
+								<object class="NSFont" key="IBUIFont" id="48088183">
+									<string key="NSName">Noteworthy-Light</string>
 									<double key="NSSize">14</double>
 									<int key="NSfFlags">16</int>
 								</object>
@@ -228,8 +228,8 @@
 								<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
-								<reference key="IBUIFontDescription" ref="85501185"/>
-								<reference key="IBUIFont" ref="192162959"/>
+								<reference key="IBUIFontDescription" ref="916154093"/>
+								<reference key="IBUIFont" ref="48088183"/>
 							</object>
 						</array>
 						<string key="NSFrame">{{15, 88}, {290, 96}}</string>
@@ -273,13 +273,13 @@
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
 								<object class="IBUIFontDescription" key="IBUIFontDescription">
-									<string key="name">Helvetica</string>
-									<string key="family">Helvetica</string>
+									<string key="name">HelveticaNeue-Light</string>
+									<string key="family">Helvetica Neue</string>
 									<int key="traits">0</int>
 									<double key="pointSize">15</double>
 								</object>
 								<object class="NSFont" key="IBUIFont">
-									<string key="NSName">Helvetica</string>
+									<string key="NSName">HelveticaNeue-Medium</string>
 									<double key="NSSize">15</double>
 									<int key="NSfFlags">16</int>
 								</object>
@@ -365,7 +365,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUINormalTitle">book it!</string>
+						<string key="IBUINormalTitle">for the record!</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="349542782">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -393,7 +393,6 @@
 						<string key="NSFrame">{{36, 435}, {249, 24}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -455,6 +454,57 @@
 						<reference key="destination" ref="921831102"/>
 					</object>
 					<int key="connectionID">319</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">whatNoteView</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="433158775"/>
+					</object>
+					<int key="connectionID">322</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">nameTextField</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="491750676"/>
+					</object>
+					<int key="connectionID">323</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">twitterTextField</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="965231413"/>
+					</object>
+					<int key="connectionID">324</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">nameFieldBeganEditing:</string>
+						<reference key="source" ref="491750676"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">17</int>
+					</object>
+					<int key="connectionID">320</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">twitterFieldBeganEditing:</string>
+						<reference key="source" ref="965231413"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">17</int>
+					</object>
+					<int key="connectionID">321</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">saveConvoPressed:</string>
+						<reference key="source" ref="26454363"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">325</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -596,21 +646,55 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">319</int>
+			<int key="maxID">325</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">GCNewConversationVC</string>
 					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="nameFieldBeganEditing:">id</string>
+						<string key="saveConvoPressed:">id</string>
+						<string key="twitterFieldBeganEditing:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="nameFieldBeganEditing:">
+							<string key="name">nameFieldBeganEditing:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="saveConvoPressed:">
+							<string key="name">saveConvoPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="twitterFieldBeganEditing:">
+							<string key="name">twitterFieldBeganEditing:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="nameTextField">UITextField</string>
+						<string key="twitterTextField">UITextField</string>
 						<string key="whatBoxView">UIView</string>
+						<string key="whatNoteView">NoteView</string>
 						<string key="whoBoxView">UIView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="nameTextField">
+							<string key="name">nameTextField</string>
+							<string key="candidateClassName">UITextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="twitterTextField">
+							<string key="name">twitterTextField</string>
+							<string key="candidateClassName">UITextField</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="whatBoxView">
 							<string key="name">whatBoxView</string>
 							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="whatNoteView">
+							<string key="name">whatNoteView</string>
+							<string key="candidateClassName">NoteView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="whoBoxView">
 							<string key="name">whoBoxView</string>

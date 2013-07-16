@@ -7,12 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NoteView.h"
 
-@interface GCNewConversationVC : UIViewController
+@protocol GCNewConversationVCDelegate <NSObject>
+-(void) newConversationVCWantsScrollToViewOrigin:(CGPoint)origin;
+@end
+
+@interface GCNewConversationVC : UIViewController<UITextViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIView * whoBoxView;
 @property (nonatomic, strong) IBOutlet UIView * whatBoxView;
 
+@property (strong, nonatomic) IBOutlet NoteView *whatNoteView;
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *twitterTextField;
+
+
+@property (nonatomic, weak) id<GCNewConversationVCDelegate> delegate;
 
 
 @end

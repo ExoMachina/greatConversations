@@ -10,10 +10,11 @@
 #import "MGScrollView.h"
 #import "GCNewConversationVC.h"
 
-@interface GCRootViewController : UIViewController <UIScrollViewDelegate>
+@interface GCRootViewController : UIViewController <UIScrollViewDelegate, GCNewConversationVCDelegate>
 
 @property (nonatomic, strong) IBOutlet MGScrollView * mainContentScrollView;
 
 @property (nonatomic, strong) GCNewConversationVC * addConversationVC;
+
 
 @end
