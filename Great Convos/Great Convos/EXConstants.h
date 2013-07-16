@@ -7,8 +7,8 @@
 //
 
 
-#define DEV_MUTE 1
-#define DEV_STATE_RESET 1
+//#define DEV_MUTE 1
+//#define DEV_STATE_RESET 1
 
 #ifdef RELEASE
 #ifdef DEV_STATE_RESET
@@ -28,5 +28,8 @@
 
 
 #define MR_SHORTHAND
+#import "MagicalRecord.h"
+#import "CoreData+MagicalRecord.h"
+
 #import "UIViewAdditions+EX.h"
 #import "NSDateAdditions+EX.h"
