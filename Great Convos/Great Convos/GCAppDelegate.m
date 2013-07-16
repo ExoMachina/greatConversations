@@ -12,6 +12,8 @@
 
 #import "GCDetailViewController.h"
 
+#import "GCRootViewController.h"
+
 @implementation GCAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -25,7 +27,9 @@
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 	    GCMasterViewController *masterViewController = [[GCMasterViewController alloc] initWithNibName:@"GCMasterViewController_iPhone" bundle:nil];
 	    self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
-	    self.window.rootViewController = self.navigationController;
+		GCRootViewController * rootVC = [[GCRootViewController alloc] init];
+		
+	    self.window.rootViewController = rootVC;
 	    masterViewController.managedObjectContext = self.managedObjectContext;
 	} else {
 	    GCMasterViewController *masterViewController = [[GCMasterViewController alloc] initWithNibName:@"GCMasterViewController_iPad" bundle:nil];
@@ -40,7 +44,10 @@
 	    self.splitViewController.delegate = detailViewController;
 	    self.splitViewController.viewControllers = @[masterNavigationController, detailNavigationController];
 	    
-	    self.window.rootViewController = self.splitViewController;
+		
+		GCRootViewController * rootVC = [[GCRootViewController alloc] init];
+		
+	    self.window.rootViewController = rootVC;
 	    masterViewController.managedObjectContext = self.managedObjectContext;
 	}
     [self.window makeKeyAndVisible];

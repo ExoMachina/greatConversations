@@ -10,4 +10,9 @@
 
 @interface GCNewConversationVC : UIViewController
 
+@property (nonatomic, strong) IBOutlet UIView * whoBoxView;
+@property (nonatomic, strong) IBOutlet UIView * whatBoxView;
+
+
+
 @end

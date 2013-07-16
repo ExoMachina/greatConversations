@@ -7,6 +7,7 @@
 //
 
 #import "GCNewConversationVC.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface GCNewConversationVC ()
 
@@ -16,7 +17,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName:@"GCNewConversationVC-iPhone" bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -27,6 +28,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	self.whoBoxView.layer.borderColor = [UIColor colorWithWhite:0.55 alpha:0.15].CGColor;
+	self.whoBoxView.layer.borderWidth = 1;
+	self.whoBoxView.layer.cornerRadius = 3;
+
+	self.whatBoxView.layer.borderColor = [UIColor colorWithWhite:0.55 alpha:0.15].CGColor;
+	self.whatBoxView.layer.borderWidth = 1;
+	self.whatBoxView.layer.cornerRadius = 3;
+
 }
 
 - (void)didReceiveMemoryWarning
