@@ -21,4 +21,10 @@
 @dynamic longitude;
 @dynamic location;
 
+-(void) awakeFromInsert{
+	[super awakeFromInsert];
+	
+	[self setModifiedDate:[NSDate date]];
+}
+
 @end

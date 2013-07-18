@@ -77,7 +77,7 @@
 		79F86A8A1795E823006CC358 /* MagicalRecord+Setup.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F86A6C1795E823006CC358 /* MagicalRecord+Setup.m */; };
 		79F86A8B1795E823006CC358 /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F86A6E1795E823006CC358 /* MagicalRecord+ShorthandSupport.m */; };
 		79F86A8C1795E823006CC358 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F86A701795E823006CC358 /* MagicalRecord.m */; };
-		79F86A911795F4B6006CC358 /* CGConversationCell-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F86A901795F4B6006CC358 /* CGConversationCell-iPhone.xib */; };
+		79F86A911795F4B6006CC358 /* GCConversationCell-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F86A901795F4B6006CC358 /* GCConversationCell-iPhone.xib */; };
 		79F86A9417986259006CC358 /* GCConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F86A9317986259006CC358 /* GCConversationCell.m */; };
 /* End PBXBuildFile section */
 
@@ -213,7 +213,7 @@
 		79F86A701795E823006CC358 /* MagicalRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalRecord.m; sourceTree = "<group>"; };
 		79F86A711795E823006CC358 /* MagicalRecordShorthand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalRecordShorthand.h; sourceTree = "<group>"; };
 		79F86A721795E823006CC358 /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
-		79F86A901795F4B6006CC358 /* CGConversationCell-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "CGConversationCell-iPhone.xib"; sourceTree = "<group>"; };
+		79F86A901795F4B6006CC358 /* GCConversationCell-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "GCConversationCell-iPhone.xib"; sourceTree = "<group>"; };
 		79F86A9217986259006CC358 /* GCConversationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCConversationCell.h; sourceTree = "<group>"; };
 		79F86A9317986259006CC358 /* GCConversationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCConversationCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -548,7 +548,7 @@
 		79F86A8F1795F49A006CC358 /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				79F86A901795F4B6006CC358 /* CGConversationCell-iPhone.xib */,
+				79F86A901795F4B6006CC358 /* GCConversationCell-iPhone.xib */,
 				79F86A9217986259006CC358 /* GCConversationCell.h */,
 				79F86A9317986259006CC358 /* GCConversationCell.m */,
 			);
@@ -618,7 +618,7 @@
 				79F23FA91794AF9500DEF2E5 /* GCNewConversationVC-iPhone.xib in Resources */,
 				79F23FEC1794C4E000DEF2E5 /* GCRootViewController-iPhone.xib in Resources */,
 				79F23FEF1794C74000DEF2E5 /* patternsquare_green@2x.png in Resources */,
-				79F86A911795F4B6006CC358 /* CGConversationCell-iPhone.xib in Resources */,
+				79F86A911795F4B6006CC358 /* GCConversationCell-iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

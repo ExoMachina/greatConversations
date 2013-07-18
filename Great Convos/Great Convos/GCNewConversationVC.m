@@ -11,6 +11,8 @@
 #import <Social/Social.h>
 #import "Conversation.h"
 
+#import "GCConversationCell.h"
+
 @interface GCNewConversationVC ()
 -(void)updateCharactersRemaining;
 @end
@@ -120,12 +122,48 @@
 	[newConversation setPartnerTwitter:self.twitterTextField.text];
 	[newConversation setSubject:self.whatNoteView.text];
 	
-	if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter] == YES){
-		SLComposeViewController * twitterComposer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-		NSString * twitterInitalText = newConversation.subject;
-		[twitterComposer setInitialText:twitterInitalText];
-		[self presentViewController:twitterComposer animated:TRUE completion:NULL];
-	}
+	[self doThatNewConversationCrazyAnimationWithConversation:newConversation];
+	
+	
+//	if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter] == YES){
+//		SLComposeViewController * twitterComposer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+//		NSString * twitterInitalText = newConversation.subject;
+//		[twitterComposer setInitialText:twitterInitalText];
+//		[self presentViewController:twitterComposer animated:TRUE completion:NULL];
+//	}
+
+}
+
+-(void) doThatNewConversationCrazyAnimationWithConversation:(Conversation*)conversation{
+	GCConversationCell * newCell = [[GCConversationCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+	[newCell shouldUpdateCellWithObject:conversation];
+	[newCell setOrigin:CGPointMake(5, 100)];
+	newCell.layer.borderColor = [UIColor colorWithWhite:0.55 alpha:0.15].CGColor;
+	newCell.layer.borderWidth = 1;
+	newCell.layer.cornerRadius = 0;
+	newCell.layer.shadowColor = UIColor.blackColor.CGColor;
+	newCell.layer.shadowOffset = CGSizeMake(0, 1);
+	newCell.layer.shadowOpacity = 0.2;
+	newCell.layer.shadowRadius = 2;
+	newCell.layer.shadowPath = [UIBezierPath bezierPathWithRect:newCell.bounds].CGPath;;
+
+
+	
+	[self.view addSubview:newCell];
+	
+	newCell.alpha = .7;
+	CATransform3D transform = CATransform3DMakeScale(2, 2, 1);
+	transform = CATransform3DRotate(transform, -10.0/360.0 * 2.0* M_PI, 0, 0, 1);
+	
+	newCell.layer.transform = transform;
+	
+	[UIView animateWithDuration:1 animations:^{
+		newCell.alpha = 1;
+		CATransform3D transform = CATransform3DMakeScale(1, 1, 1);
+		transform = CATransform3DRotate(transform, -5.0/360.0 * 2.0* M_PI, 0, 0, 1);
+		
+		newCell.layer.transform = transform;
+	}];
 	
 }
 

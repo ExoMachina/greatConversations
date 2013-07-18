@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Conversation.h"
 
 @interface GCConversationCell : UITableViewCell
 
 @property (nonatomic, strong) IBOutlet UILabel * conversationLabel;
 @property (strong, nonatomic) IBOutlet UILabel *detailsLabel;
 
+
++ (CGFloat)heightForObject:(Conversation*)conversation atIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView;
+- (BOOL)shouldUpdateCellWithObject:(Conversation*)conversation;
 @end

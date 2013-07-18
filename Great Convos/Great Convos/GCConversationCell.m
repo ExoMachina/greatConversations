@@ -7,7 +7,6 @@
 //
 
 #import "GCConversationCell.h"
-#import "Conversation.h"
 
 @implementation GCConversationCell
 
