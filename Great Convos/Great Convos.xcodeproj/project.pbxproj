@@ -78,6 +78,7 @@
 		79F86A8B1795E823006CC358 /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F86A6E1795E823006CC358 /* MagicalRecord+ShorthandSupport.m */; };
 		79F86A8C1795E823006CC358 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F86A701795E823006CC358 /* MagicalRecord.m */; };
 		79F86A911795F4B6006CC358 /* CGConversationCell-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F86A901795F4B6006CC358 /* CGConversationCell-iPhone.xib */; };
+		79F86A9417986259006CC358 /* GCConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F86A9317986259006CC358 /* GCConversationCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -213,6 +214,8 @@
 		79F86A711795E823006CC358 /* MagicalRecordShorthand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalRecordShorthand.h; sourceTree = "<group>"; };
 		79F86A721795E823006CC358 /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
 		79F86A901795F4B6006CC358 /* CGConversationCell-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "CGConversationCell-iPhone.xib"; sourceTree = "<group>"; };
+		79F86A9217986259006CC358 /* GCConversationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCConversationCell.h; sourceTree = "<group>"; };
+		79F86A9317986259006CC358 /* GCConversationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCConversationCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -546,6 +549,8 @@
 			isa = PBXGroup;
 			children = (
 				79F86A901795F4B6006CC358 /* CGConversationCell-iPhone.xib */,
+				79F86A9217986259006CC358 /* GCConversationCell.h */,
+				79F86A9317986259006CC358 /* GCConversationCell.m */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -675,6 +680,7 @@
 				79F86A8A1795E823006CC358 /* MagicalRecord+Setup.m in Sources */,
 				79F86A8B1795E823006CC358 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				79F86A8C1795E823006CC358 /* MagicalRecord.m in Sources */,
+				79F86A9417986259006CC358 /* GCConversationCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
