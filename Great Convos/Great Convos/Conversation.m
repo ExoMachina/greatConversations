@@ -7,7 +7,7 @@
 //
 
 #import "Conversation.h"
-
+#import "GCConversationCell.h"
 
 @implementation Conversation
 
@@ -20,6 +20,10 @@
 @dynamic latitude;
 @dynamic longitude;
 @dynamic location;
+
+- (Class)cellClass{
+	return [GCConversationCell class];
+}
 
 -(void) awakeFromInsert{
 	[super awakeFromInsert];

@@ -1,3 +1,6 @@
 [submodule "MagicalRecord"]
 	path = MagicalRecord
 	url = git@github.com:alist/MagicalRecord.git
+[submodule "nimbus"]
+	path = nimbus
+	url = git@github.com:alist/nimbus.git

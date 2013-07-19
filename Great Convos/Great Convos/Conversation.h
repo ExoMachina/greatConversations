@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "NICellFactory.h"
 
 
-@interface Conversation : NSManagedObject
+@interface Conversation : NSManagedObject <NICellObject>
 
 @property (nonatomic, retain) NSNumber * conversationID;
 @property (nonatomic, retain) NSNumber * incompleteLocal;
