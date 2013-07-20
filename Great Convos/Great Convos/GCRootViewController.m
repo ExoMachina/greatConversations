@@ -9,7 +9,7 @@
 #import "GCRootViewController.h"
 
 @interface GCRootViewController (){
-	float originalPastConversationsOrigin;
+	float originalPastConversationsDistanceFromBottom;
 }
 @end
 
@@ -73,8 +73,8 @@ const float pastConversationsDisplayedPosition = 20;
 -(void)viewDidAppear:(BOOL)animated{
 	[super viewDidAppear:animated];
 	
-	if (originalPastConversationsOrigin == 0){
-		originalPastConversationsOrigin = self.pastConversationsPeekView.origin.y;
+	if (originalPastConversationsDistanceFromBottom == 0){
+		originalPastConversationsDistanceFromBottom = self.view.height - self.pastConversationsPeekView.origin.y;
 	}
 
 }
@@ -130,7 +130,7 @@ const float pastConversationsDisplayedPosition = 20;
 			finalY = pastConversationsDisplayedPosition;
         }
         else if(finalY > _firstYPastConversations) {
-			finalY = originalPastConversationsOrigin;
+			finalY = [self peekViewRestingYLocation];
         }
 		
         CGFloat animationDuration = (ABS(velocityY)*.0002)+.2;
@@ -154,6 +154,15 @@ const float pastConversationsDisplayedPosition = 20;
 	}
 }
 
+-(float) peekViewRestingYLocation{
+	float finalY = self.view.height - originalPastConversationsDistanceFromBottom;
+	
+	if (UIDeviceOrientationIsLandscape( [UIApplication sharedApplication].statusBarOrientation)){
+		finalY = 320 - originalPastConversationsDistanceFromBottom - 20;
+	}
+	return finalY;
+}
+
 -(void) setpastConversationsPeekViewDisplayed:(BOOL)display{
 	CGFloat finalY = 0;
 	CGFloat finalX = self.pastConversationsPeekView.origin.x;
@@ -161,7 +170,7 @@ const float pastConversationsDisplayedPosition = 20;
 		finalY = pastConversationsDisplayedPosition;
 	}
 	else {
-		finalY = originalPastConversationsOrigin;
+		finalY = [self peekViewRestingYLocation];
 	}
 	
 	CGFloat animationDuration = .2+.2;
@@ -176,7 +185,7 @@ const float pastConversationsDisplayedPosition = 20;
 }
 
 -(BOOL) pastConversationsIsDisplayed{
-	return (self.pastConversationsPeekView.origin.y != originalPastConversationsOrigin);
+	return (self.pastConversationsPeekView.origin.y != [self peekViewRestingYLocation]);
 }
 
 -(void) pastConversationsTapRecognizerDidTap:(UITapGestureRecognizer*)tapGesture{
@@ -194,7 +203,7 @@ const float pastConversationsDisplayedPosition = 20;
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if([keyPath isEqualToString:@"frame"]) {
-		float shadowRadius = ceilf((originalPastConversationsOrigin - self.pastConversationsPeekView.origin.y)/22 );
+		float shadowRadius = ceilf((originalPastConversationsDistanceFromBottom - self.pastConversationsPeekView.origin.y)/22 );
 		[self.pastConversationsPeekView.layer setShadowRadius:shadowRadius];
 		self.pastConversationsPeekView.layer.shadowOpacity = MAX(shadowRadius/60.0f,0.2f);
 		

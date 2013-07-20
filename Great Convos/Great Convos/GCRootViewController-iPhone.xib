@@ -34,7 +34,7 @@
 			</object>
 			<object class="IBUIView" id="191373211">
 				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">274</int>
+				<int key="NSvFlags">319</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIScrollView" id="538226731">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -42,7 +42,7 @@
 						<string key="NSFrameSize">{320, 412}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="190912222"/>
+						<reference key="NSNextKeyView" ref="673325688"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIAutoresizesSubviews">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -55,15 +55,15 @@
 						<double key="IBUIScrollIndicatorInsets.left">-1</double>
 						<double key="IBUIScrollIndicatorInsets.right">0.0</double>
 					</object>
-					<object class="IBUIView" id="190912222">
+					<object class="IBUIView" id="673325688">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">269</int>
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="IBUILabel" id="493571632">
-								<reference key="NSNextResponder" ref="190912222"/>
+								<reference key="NSNextResponder" ref="673325688"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{64, 6}, {191, 35}}</string>
-								<reference key="NSSuperview" ref="190912222"/>
+								<reference key="NSSuperview" ref="673325688"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
@@ -106,7 +106,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
-				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
+				<string key="NSFrameSize">{320, 460}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="538226731"/>
@@ -117,7 +117,6 @@
 						<int key="NSID">2</int>
 					</object>
 				</object>
-				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 		</array>
@@ -143,7 +142,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">pastConversationsPeekView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="190912222"/>
+						<reference key="destination" ref="673325688"/>
 					</object>
 					<int key="connectionID">110</int>
 				</object>
@@ -161,7 +160,7 @@
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="538226731"/>
-							<reference ref="190912222"/>
+							<reference ref="673325688"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -183,7 +182,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">92</int>
-						<reference key="object" ref="190912222"/>
+						<reference key="object" ref="673325688"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="493571632"/>
 						</array>
@@ -193,7 +192,7 @@
 						<int key="objectID">53</int>
 						<reference key="object" ref="493571632"/>
 						<array class="NSMutableArray" key="children"/>
-						<reference key="parent" ref="190912222"/>
+						<reference key="parent" ref="673325688"/>
 					</object>
 				</array>
 			</object>
