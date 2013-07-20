@@ -59,6 +59,7 @@
 	self.tvModel = nil;
 	
 	[self.tableView setDataSource:self.tvModel];
+	[self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
