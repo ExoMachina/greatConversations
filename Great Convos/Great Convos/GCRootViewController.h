@@ -13,6 +13,9 @@
 @interface GCRootViewController : UIViewController <UIScrollViewDelegate, GCNewConversationVCDelegate>
 
 @property (nonatomic, strong) IBOutlet MGScrollView * mainContentScrollView;
+@property (strong, nonatomic) IBOutlet UIView *pastConversationsPeekView;
+
+
 
 @property (nonatomic, strong) GCNewConversationVC * addConversationVC;
 
