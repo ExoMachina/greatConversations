@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "MGScrollView.h"
 #import "GCNewConversationVC.h"
+#import "GCPastQuestionsVC.h"
 
 @interface GCRootViewController : UIViewController <UIScrollViewDelegate, GCNewConversationVCDelegate>
 
 @property (nonatomic, strong) IBOutlet MGScrollView * mainContentScrollView;
 @property (strong, nonatomic) IBOutlet UIView *pastConversationsPeekView;
-
+@property (strong, nonatomic) GCPastQuestionsVC * pastQuestionsVC;
 
 
 @property (nonatomic, strong) GCNewConversationVC * addConversationVC;

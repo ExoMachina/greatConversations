@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) IBOutlet UILabel * conversationLabel;
 @property (strong, nonatomic) IBOutlet UILabel *detailsLabel;
-
+@property (strong, nonatomic) IBOutlet UIView * styleView;
 
 + (CGFloat)heightForObject:(Conversation*)conversation atIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView;
 - (BOOL)shouldUpdateCellWithObject:(Conversation*)conversation;

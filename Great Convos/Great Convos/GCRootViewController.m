@@ -52,8 +52,8 @@ const float pastConversationsDisplayedPosition = 20;
 	[self.mainContentScrollView addSubview:self.addConversationVC.view];	
 	
 	
-//	self.pastQuestionsVC = [[GCPastQuestionsVC alloc] init];
-//	[self.pastConversationsPeekView addSubview:self.pastQuestionsVC.view];
+	self.pastQuestionsVC = [[GCPastQuestionsVC alloc] init];
+	[self.pastConversationsPeekView addSubview:self.pastQuestionsVC.view];
 	self.pastConversationsPeekView.layer.shadowColor = UIColor.blackColor.CGColor;
 	self.pastConversationsPeekView.layer.shadowOffset = CGSizeMake(0, -1);
 	self.pastConversationsPeekView.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.pastConversationsPeekView.bounds].CGPath;;

@@ -122,7 +122,9 @@
 	[newConversation setPartnerTwitter:self.twitterTextField.text];
 	[newConversation setSubject:self.whatNoteView.text];
 	
-	
+	[[newConversation managedObjectContext] saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+		
+	}];
 	
 	void (^makeTwitterHappen)(void)  = ^{
 		if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter] == YES){
@@ -141,14 +143,14 @@
 	GCConversationCell * newCell = [[GCConversationCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 	[newCell shouldUpdateCellWithObject:conversation];
 	[newCell setOrigin:CGPointMake(5, 100)];
-	newCell.layer.borderColor = [UIColor colorWithWhite:0.55 alpha:0.15].CGColor;
-	newCell.layer.borderWidth = 1;
-	newCell.layer.cornerRadius = 0;
-	newCell.layer.shadowColor = UIColor.blackColor.CGColor;
-	newCell.layer.shadowOffset = CGSizeMake(0, 1);
-	newCell.layer.shadowOpacity = 0.2;
-	newCell.layer.shadowRadius = 2;
-	newCell.layer.shadowPath = [UIBezierPath bezierPathWithRect:newCell.bounds].CGPath;
+//	newCell.layer.borderColor = [UIColor colorWithWhite:0.55 alpha:0.15].CGColor;
+//	newCell.layer.borderWidth = 1;
+//	newCell.layer.cornerRadius = 0;
+//	newCell.layer.shadowColor = UIColor.blackColor.CGColor;
+//	newCell.layer.shadowOffset = CGSizeMake(0, 1);
+//	newCell.layer.shadowOpacity = 0.2;
+//	newCell.layer.shadowRadius = 2;
+//	newCell.layer.shadowPath = [UIBezierPath bezierPathWithRect:newCell.bounds].CGPath;
 	
 	[self.view addSubview:newCell];
 	

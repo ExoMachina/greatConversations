@@ -34,6 +34,8 @@
 		792CD62C1799FB300036F243 /* NIRadioGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792CD6221799FB300036F243 /* NIRadioGroupController.m */; };
 		792CD62D1799FB300036F243 /* NITableViewActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 792CD6241799FB300036F243 /* NITableViewActions.m */; };
 		792CD62E1799FB300036F243 /* NITableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 792CD6271799FB300036F243 /* NITableViewModel.m */; };
+		792CD632179A16540036F243 /* GCPastQuestionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 792CD630179A16540036F243 /* GCPastQuestionsVC.m */; };
+		792CD633179A16540036F243 /* GCPastQuestionsVC-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 792CD631179A16540036F243 /* GCPastQuestionsVC-iPhone.xib */; };
 		79F23F6A1794A9C400DEF2E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F23F691794A9C400DEF2E5 /* UIKit.framework */; };
 		79F23F6C1794A9C400DEF2E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F23F6B1794A9C400DEF2E5 /* Foundation.framework */; };
 		79F23F6E1794A9C400DEF2E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F23F6D1794A9C400DEF2E5 /* CoreGraphics.framework */; };
@@ -172,6 +174,9 @@
 		792CD6251799FB300036F243 /* NITableViewModel+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NITableViewModel+Private.h"; sourceTree = "<group>"; };
 		792CD6261799FB300036F243 /* NITableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NITableViewModel.h; sourceTree = "<group>"; };
 		792CD6271799FB300036F243 /* NITableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NITableViewModel.m; sourceTree = "<group>"; };
+		792CD62F179A16540036F243 /* GCPastQuestionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPastQuestionsVC.h; sourceTree = "<group>"; };
+		792CD630179A16540036F243 /* GCPastQuestionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPastQuestionsVC.m; sourceTree = "<group>"; };
+		792CD631179A16540036F243 /* GCPastQuestionsVC-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "GCPastQuestionsVC-iPhone.xib"; sourceTree = "<group>"; };
 		79F23F661794A9C400DEF2E5 /* Great Convos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Great Convos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F23F691794A9C400DEF2E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		79F23F6B1794A9C400DEF2E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -720,6 +725,9 @@
 			isa = PBXGroup;
 			children = (
 				79F86A8F1795F49A006CC358 /* cells */,
+				792CD62F179A16540036F243 /* GCPastQuestionsVC.h */,
+				792CD630179A16540036F243 /* GCPastQuestionsVC.m */,
+				792CD631179A16540036F243 /* GCPastQuestionsVC-iPhone.xib */,
 			);
 			name = "Conversations ";
 			sourceTree = "<group>";
@@ -798,6 +806,7 @@
 				79F23FEC1794C4E000DEF2E5 /* GCRootViewController-iPhone.xib in Resources */,
 				79F23FEF1794C74000DEF2E5 /* patternsquare_green@2x.png in Resources */,
 				79F86A911795F4B6006CC358 /* GCConversationCell-iPhone.xib in Resources */,
+				792CD633179A16540036F243 /* GCPastQuestionsVC-iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,6 +896,7 @@
 				792CD62C1799FB300036F243 /* NIRadioGroupController.m in Sources */,
 				792CD62D1799FB300036F243 /* NITableViewActions.m in Sources */,
 				792CD62E1799FB300036F243 /* NITableViewModel.m in Sources */,
+				792CD632179A16540036F243 /* GCPastQuestionsVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
