@@ -46,13 +46,16 @@
 
 -(NSArray*)displayedObjects{
 	if (_displayedObjects == nil){
-		_displayedObjects = [Conversation findAllSortedBy:@"modifiedDate" ascending:FALSE];
+		self.fetchController = [Conversation fetchAllGroupedBy:nil withPredicate:nil sortedBy:@"modifiedDate" ascending:FALSE delegate:self];
+		[self.fetchController performFetch:nil];
+		_displayedObjects = [self.fetchController fetchedObjects];
+//		_displayedObjects = [Conversation findAllSortedBy:@"modifiedDate" ascending:FALSE];
 	}
 	return _displayedObjects;
 }
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller{
-	self.displayedObjects = nil;
+	self.displayedObjects = [self.fetchController fetchedObjects];
 	self.tvModel = nil;
 	
 	[self.tableView setDataSource:self.tvModel];

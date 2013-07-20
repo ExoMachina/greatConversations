@@ -13,6 +13,7 @@
 @interface GCPastQuestionsVC : UIViewController <NITableViewModelDelegate, UITableViewDelegate,NSFetchedResultsControllerDelegate >
 @property (nonatomic, strong) NSArray *			displayedObjects;
 @property (nonatomic, strong) NITableViewModel*	tvModel;
+@property (nonatomic, strong) NSFetchedResultsController * fetchController;
 @property (nonatomic, strong) IBOutlet UITableView * tableView;
 
 @end
